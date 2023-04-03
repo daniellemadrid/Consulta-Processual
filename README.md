@@ -45,6 +45,6 @@ Testes unitários são realizados nos componentes e nas páginas para verificar 
 ## 3. Decisões 
 
 Se tiver alguma dúvida sobre as decisões por favor acesse o arquivo mais detalhado:
-`HISTORY.MD`
+`HISTORY.MD`[https://github.com/daniellemadrid/Processo-Jur-dico/blob/main/HISTORY.MD]
 
 
