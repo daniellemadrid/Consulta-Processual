@@ -1,38 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio: Consulta Processual
 
-## Getting Started
+Oii, tudo bem? Seja bem vindo a Busca de Processos. 
 
-First, run the development server:
+A linguagem usada neste projeto é Javascript com framework React.js e Next, os testes são com Jest(unitários) e Cypress (e2e).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 1. Iniciando o projeto 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para começar, rode:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+`npm install`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+`npm run dev`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+*Irá rodar no caminho: `http://localhost:3000/`*
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+*por favor, adicione /home no final do caminho*
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar os testes unitários do front-end, rode em um segundo terminal:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`npm run test`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Para rodar o testes e2e cypress, você pode rodar o comando no segundo terminal ou criar um terceiro :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`npx cypress run`
+   
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 2. Overview
+
+A arquitetura do projeto possui 4 pastas principais:
+
+1. components: onde fica os componentes do projeto para serem reutilizados 
+2. mock: onde fica os dados mockados e utilizados pelo projeto, que seriam os Tribunais (courtMock.json) e os dados das movimentações (processesMock.json)
+3. pages: onde renderiza e reutiliza os componentes criados, existe a home (tela de busca) e a process(tela de exibição)
+4. store: que faz o uso de dados do processo para mostrar na tela de exibição 
+
+
+Na home o usuário tem a opção de buscar por número de CNJ de um processo e por um tribunal especifico do CNJ.
+O usuário pode também refazer a operação de busca em qualquer outra página a partir do Header da página.
+
+Testes unitários são realizados nos componentes e nas páginas para verificar o uso ideial deles e renderização na tela. O fluxo de sucesso e erros é testado a partir do teste cypress e2e que se encontra no caminho `cypress\e2e\spec.cy.js`
+
+## 3. Decisões 
+
+Se tiver alguma dúvida sobre as decisões por favor acesse o arquivo mais detalhado:
+`HISTORY.MD`
+
+
