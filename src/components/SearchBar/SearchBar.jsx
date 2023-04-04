@@ -15,7 +15,6 @@ const SearchBar = () => {
     const [value, setValue] = useState("");
 
     const handleClick = (e) => {
-        e.preventDefault();
         findProcess(value, tjId);
 
         if (process) {

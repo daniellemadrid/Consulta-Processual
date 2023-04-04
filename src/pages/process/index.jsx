@@ -23,7 +23,7 @@ const Process = () => {
 
     const handleRedirect = () => {
         clearData();
-        router.push('/home');
+        router.push('/');
     }
 
     return (

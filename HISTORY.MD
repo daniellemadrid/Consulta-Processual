@@ -1,4 +1,5 @@
-## Reflexões e decisões
+Reflexões e decisões
+===
 
 
 ## Frontend
@@ -26,5 +27,6 @@ Usei o Cypress para testar o fluxo do projeto pensando nas validações também.
 ## Ideias 
 Se eu pudesse, persistiria os dados com banco de dados real para substituir os Mocks criados e com isso conseguir utilizar 100% do potencial do Next, já que ele é um framework feito para facilitar a construção de projetos onde o frontend e backend se encontram no mesmo repositório, encurtando vários processos. Passaria para Atomic Design pensando mais a longo prazo e escalabilidade do projeto, pensaria em novos cenários de testes para ter uma maior garantia de cobertura e qualidade do projeto.
 
+## Bugs conhecidos
 
-
+Estou ciente do bug que ocorre na página home onde é necessário clicar duas vezes no botão de busca para realizar a ação, este item seria prioridade caso houvesse mais tempo.
