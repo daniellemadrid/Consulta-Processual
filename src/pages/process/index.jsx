@@ -5,14 +5,14 @@ import { useProcessStore } from '../../store/processes';
 const courtMock = require("../../mock/courtMock.json");
 import { useRouter } from "next/router";
 import ProcessDetails from "../../components/ProcessDetails/ProcessDetails";
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Process = () => {
     const router = useRouter();
 
-    const { process } = useProcessStore((state) => ({
-        findProcess: state.findProcess,
+    const { process, clearData } = useProcessStore((state) => ({
         process: state.process,
+        clearData: state.clearData
     }));
 
     const courtNameById = courtMock.map((court) => {
@@ -22,6 +22,7 @@ const Process = () => {
     })
 
     const handleRedirect = () => {
+        clearData();
         router.push('/home');
     }
 
@@ -35,7 +36,7 @@ const Process = () => {
                 <SearchBar />
             </div>
             <div className="flex flex-col pl-48">
-                <span className="text-2xl m-4 p-4">Processo n. {process?.id} do {courtNameById}</span>
+                <span data-testid="processNumber" className="text-2xl m-4 p-4">Processo n. {process?.id} do {courtNameById}</span>
                 <span className="text-xl m-4 p-4">Distribuído em: {process?.date}</span>
             </div>
             <div className="flex w-full justify-around">

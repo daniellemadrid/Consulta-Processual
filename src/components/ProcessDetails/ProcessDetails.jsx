@@ -3,16 +3,20 @@ import React from 'react';
 const ProcessDetails = ({ process }) => {
     return (
         <div className="flex flex-col gap-y-3 text-xl">
-            <div className='flex flex-col gap-y-2 border-b-2 border-gray-300'>
+            <div className='flex flex-col gap-y-2 border-b-2 border-gray-300 pb-3'>
                 <span className="text-2xl">Detalhes do processo</span>
                 <div className="flex flex-col">
                     <span className="font-medium">Endereço do tribunal</span>
                     <span className="text-indigo-500 font-bold">{process?.adress}</span>
                 </div>
-                <div className="flex flex-col pb-3">
-                    <span className="font-medium">Valor a ser pago</span>
-                    <span className="text-indigo-500 font-bold">R$ {process?.value}</span>
-                </div>
+                {process?.value ?
+                    <div className="flex flex-col">
+                        <span data-testid="value" className="font-medium">Valor a ser pago</span>
+                        <span className="text-indigo-500 font-bold">R$ {process?.value}</span>
+                    </div>
+                    :
+                    <></>
+                }
             </div>
             <div className='flex flex-col gap-y-3'>
                 <span className="text-2xl">Partes envolvidas</span>

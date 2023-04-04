@@ -16,9 +16,6 @@ describe('ProcessDetails component', () => {
         const courtElement = screen.getByText('Endereço do tribunal');
         expect(courtElement).toBeInTheDocument();
 
-        const valueElement = screen.getByText('Valor a ser pago');
-        expect(valueElement).toBeInTheDocument();
-
         const processDetailsElement = screen.getByText('Partes envolvidas');
         expect(processDetailsElement).toBeInTheDocument();
 

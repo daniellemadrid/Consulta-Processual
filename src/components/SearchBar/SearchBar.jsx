@@ -6,49 +6,35 @@ import React from 'react';
 const SearchBar = () => {
     const router = useRouter();
 
-    const { findProcess, process } = useProcessStore((state) => ({
+    const { findProcess, tjId, process } = useProcessStore((state) => ({
         findProcess: state.findProcess,
-        process: state.process
+        tjId: state.tjId,
+        process: state.process,
     }));
 
-    const [formEmptyError, setFormEmptyError] = useState(false);
     const [value, setValue] = useState("");
 
     const handleClick = (e) => {
-        !value ? setFormEmptyError(true) : setFormEmptyError(false)
-
-        findProcess(value)
+        e.preventDefault();
+        findProcess(value, tjId);
 
         if (process) {
             router.push('/process')
-        } else {
-            alert("Processo não encontrado")
         }
     }
 
     return (
         <div className="flex gap-4">
             <div className="flex items-center justify-center flex-col">
-                <input className="h-14 pl-2 placeholder-300 border-4 rounded-md text-3xl border-gray-400 outline-none"
+                <input className="h-14 pl-2 placeholder-300 border-4 rounded-md text-3xl border-gray-400 bg-gray-100 outline-none"
                     type="text"
                     data-testid='input'
-                    onChange={(e) => { setValue(e.target.value); e.preventDefault(); }}
-                    placeholder="Número do processo"
+                    onChange={(e) => { setValue(e.target.value) }}
+                    placeholder='Número do processo'
                 />
-                {formEmptyError ?
-                    <div className="text-red-600">
-                        FAZER VALIDACOES COM ESSES 3 CASOS:
-                        Preencha pelo menos um dos campos
-                        Selecione pelo menos um tribunal relacionado a este CNJ
-                        Por favor digite um código com o formato NNNNNNN-NN.NNNN.N.NN.NNNN
-                    </div>
-                    :
-                    <></>
-                }
             </div>
-
             <div>
-                <button data-testid="button" onClick={(e) => handleClick(e)} className="h-14 w-20 border-4 border-gray-400 rounded-md hover:bg-gray-300 md:transition-all " type='submit'>
+                <button data-testid="button" onClick={(e) => handleClick(e)} className="h-14 w-20 border-4 border-gray-400 rounded-md hover:bg-gray-300 md:transition-all">
                     <i className="fas fa-search"></i>
                 </button>
             </div>

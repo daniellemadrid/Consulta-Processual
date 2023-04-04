@@ -135,25 +135,7 @@
         "defendent": "Osmar Gomes",
         "defendentLawyer": "Bruna Ferreira",
         "adress": "Avenida Borges de Medeiros, 1000",
-        "value": "4.327,80",
         "date": "25/06/2017",
-        "movements": [
-            {
-                "date": "08/09/2015",
-                "content": "Atualmente, o processo encontra-se em fase final de julgamento, aguardando a sentença que definirá a responsabilidade de cada uma das partes em relação aos danos morais alegados pela autora. Independentemente do resultado final, é importante ressaltar que todo processo judicial deve ser conduzido de forma justa e imparcial, garantindo o direito de defesa e o devido processo legal a todas as partes envolvidas. É preciso ter em mente que as palavras têm poder e podem causar feridas profundas, por isso é importante sempre ter cuidado com o que se diz ou escreve, especialmente em ambientes públicos como as redes sociais."
-            },
-            {
-                "date": "04/01/2015",
-                "content": "Foram realizadas também audiências de conciliação e instrução, nas quais foram ouvidas testemunhas e apresentadas provas documentais e periciais. Em algumas ocasiões, o processo foi adiado em razão de pedidos de prorrogação de prazos ou de suspensão temporária, principalmente para que as partes pudessem se manifestar sobre novas provas apresentadas."
-            },
-            {
-                "date": "05/11/2014",
-                "content": "A autora alega que sofreu danos morais em razão de comentários ofensivos feitos por Osmar Gomes em redes sociais, o que teria gerado constrangimento, humilhação e prejuízos em sua vida pessoal e profissional. Por sua vez, a defendente argumenta que os comentários não tiveram a intenção de ofender ou prejudicar a autora. Durante o curso do processo, foram apresentados diversos documentos comprobatórios, incluindo capturas de tela das publicações e depoimentos de testemunhas que presenciaram os comentários."
-            },
-            {
-                "date": "20/08/2014",
-                "content": "O processo judicial movido por Danielle dos Reis Madrid contra Osmar Gomes envolve uma questão de danos morais e tem sido marcado por diversas movimentações judiciais desde sua abertura. Entre as movimentações, destaca-se a apresentação de petições iniciais e contestações por ambas as partes, nas quais foram apresentados os argumentos de cada uma das partes em relação ao caso."
-            }
-        ]
+        "movements": []
     }
 ]

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import SearchBar from './SearchBar';
 
@@ -14,15 +14,5 @@ describe('SearchBar component', () => {
         const searchBarElement = screen.getByRole('textbox');
         expect(searchBarElement).toBeInTheDocument();
         expect(screen.getByTestId("button")).toBeInTheDocument();
-    });
-
-    describe('validate Cnj', () => {
-        it('should return true for a valid CNJ code', () => {
-            expect(validateCnjCode('0000000-00.0000.0.00.0000')).toBe(true);
-        });
-
-        it('should return false for an invalid CNJ code', () => {
-            expect(validateCnjCode('0000000-00.0000.0.00')).toBe(false);
-        });
     });
 });
