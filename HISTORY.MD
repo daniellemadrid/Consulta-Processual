@@ -7,7 +7,7 @@ Reflexões e decisões
 Eu pensei primeiro em como iria montar a estrutura, me veio em mente a estrutura Atomic Design mas logo pensei em algo mais simples já que o projeto não seria tão complexo. Então acabei criando componentes com arquivos de testes juntos em cada pasta. 
 Construí com Next pois é uma ferramenta nova que me possibilita ter mais praticidade em desenvolver, por exemplo: com ele consegui criar rotas a partir de um arquivo ou pasta dentro de src/pages. (tudo o que for criado dentro de pages é interpretado como um endpoint), caso seja criado um arquivo chamado jusBrasil dentro de src/pages, será possível acessar direto no navegador.
 
-Criei os componentes e chamei para duas páginas criadas, src/pages/home para buscar e src/pages/process para exibir, me baseei pelas imagens fornecidas pelo repositório e criei validações para o input de texto ser obrigatório e enviar o cnj de forma válida junto com o tribunal correspondente.
+Criei os componentes e chamei para duas páginas criadas, src/index para buscar e src/pages/process para exibir, me baseei pelas imagens fornecidas pelo repositório e criei validações para o input de texto ser obrigatório e enviar o cnj de forma válida junto com o tribunal correspondente.
 
 Usei Tailwind para estilizar o projeto pois estou aprendendo e pareceu uma ótima oportunidade para aplicar. Os ganhos com a utilização do mesmo são notáveis, os quais são: praticidade em poder manter em um arquivo só, ou seja, não é necessário a criação de arquivos CSS para cada página e/ou componente.
 
