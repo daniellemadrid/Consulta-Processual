@@ -1,6 +1,6 @@
 describe('home page test', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/home');
+    cy.visit('http://localhost:3000');
   });
   it('sucess case', () => {
     cy.contains('Busca de processos').should('be.visible')

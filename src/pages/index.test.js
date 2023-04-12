@@ -11,7 +11,7 @@ describe('Home page', () => {
         render(<Home />)
 
         expect(screen.getByText("Busca de processos")).toBeInTheDocument();
-        //   expect(screen.getByText("Selecione um tribunal para listar os processos ou busque pelo número unificado de um processo específico.")).toBeInTheDocument();
+
 
         const dropdownElement = screen.getByText('Tribunais');
         expect(dropdownElement).toBeInTheDocument();

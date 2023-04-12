@@ -7,7 +7,7 @@ jest.mock('next/router', () => require('next-router-mock'));
 
 describe('Dropdown component', () => {
 
-    it.only('should render the Dropdown component', () => {
+    it('should render the Dropdown component', () => {
         render(<Dropdown />)
 
         const dropdownElement = screen.getByText('Tribunais');

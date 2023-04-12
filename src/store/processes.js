@@ -2,7 +2,6 @@ import { create } from "zustand"
 const processesMock = require("../mock/processesMock.json")
 
 const mappedProcesses = processesMock.map((process) => process)
-const regex = /^\d{7}-\d{2}\.\d{4}\.\d{1}\.\d{2}\.\d{4}$/gm
 
 export const useProcessStore = create((set, get) => ({
     processes: [],
